@@ -16,12 +16,12 @@
 #     return output["choices"][0]["text"].strip()
 
 
-# from transformers import pipeline
+from transformers import pipeline
 
-# # Crée le pipeline de génération de texte avec un modèle Hugging Face (ici GPT-2)
-# chatbot = pipeline("text-generation", model="AbdelilahFdg/darija-chat1")
+# Crée le pipeline de génération de texte avec un modèle Hugging Face (ici GPT-2)
+chatbot = pipeline("text-generation", model="AbdelilahFdg/darija-chat1")
 
-# def chatbot_dj(sentence):
-#     # Génère une réponse à partir de l'entrée utilisateur
-#     response = chatbot(sentence, max_new_tokens=100)
-#     return response[0]['generated_text'].strip()
+def chatbot_dj(sentence):
+    # Génère une réponse à partir de l'entrée utilisateur
+    response = chatbot(sentence, max_new_tokens=100)
+    return response[0]['generated_text'].strip()
