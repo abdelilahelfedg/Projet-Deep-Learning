@@ -2,8 +2,8 @@ import os
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 from flask import Flask, request, jsonify, render_template
-from trsl_dr_en import translation
-# from chatbot_darija import chatbot_dj
+from interface.trsl_dr_en import translation
+from interface.chatbot_darija import chatbot_dj
 
 app = Flask(__name__)
 
