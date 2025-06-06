@@ -12,14 +12,14 @@ def home():
     return render_template("index.html")
 
 # Route pour le chatbot
-# @app.route('/chatbot', methods=['POST'])
-# def chatbot_darija():
-#     data = request.get_json()
-#     user_message = data.get('message', '').lower()
+@app.route('/chatbot', methods=['POST'])
+def chatbot_darija():
+    data = request.get_json()
+    user_message = data.get('message', '').lower()
     
-#     response = chatbot_dj(user_message)
+    response = chatbot_dj(user_message)
     
-#     return jsonify({'response': response})
+    return jsonify({'response': response})
 
 # Route pour le traducteur
 @app.route('/translate', methods=['POST'])
